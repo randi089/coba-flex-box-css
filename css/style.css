@@ -1,0 +1,183 @@
+@font-face{
+    font-family: 'gracie';
+    src: url('../font/Gracie.otf')
+}
+
+@font-face{
+    font-family: 'delray';
+    src: url('../font/delray-heavy.otf')
+}
+
+@font-face{
+    font-family: 'mlc';
+    src: url('../font/Melancholy-Serif.otf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'delray', sans-serif;
+    overflow-y: hidden;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    background-color: #3AA7E2;
+    justify-content: space-around;
+    color: #1A2130;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    position: fixed;
+}
+
+nav .logo {
+    font-family: 'gracie';
+    letter-spacing: 3px;
+    user-select: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+nav .logo:hover {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #1A2130;
+    text-decoration: none;
+    padding: 5px;
+    transition: all .2s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #050C9C;
+    border-radius: 5px;
+    transform: translateY(10%);
+}
+
+/* content */
+.content {
+    font-family: 'mlc';
+    max-width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-shadow: 0px 0 2px 2px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    padding: 80px 30px 30px;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;    
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -4px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(248, 176, 248);
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+.menu-toggle:hover span {
+    background-color: rgb(248, 213, 248);
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* Responsive Breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background-color: rgba(211, 58, 211, .7);
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all .5s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    nav ul li a {
+        color: black;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
