@@ -131,11 +131,11 @@ nav ul li a:hover {
 .contentp>.produk>h4 {
     margin: 10px 0;
     text-align: center;
-}
-
-.contentp>.produk>.tes {
-    background-color: #050C9C;
-    padding: 70px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .produk>button {
