@@ -16,6 +16,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -79,12 +80,14 @@ nav ul li a:hover {
     min-height: 100vh;
     margin: 0 auto;
     box-shadow: 2px 0 2px rgba(0, 0, 0, .3), -2px 0 2px rgba(0, 0, 0, .3);
-    box-sizing: border-box;
     padding: 60px 140px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+.content>p {
+    align-self: self-start;
 }
 
 .content h1 {
@@ -93,18 +96,12 @@ nav ul li a:hover {
     font-size: 2em;
 }
 
-.content>.img {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-.content>.img>img {
+.content>img {
     max-width: 100%;
     border: 10px solid #fff;
     box-shadow: 0 0 2px rgba(0, 0, 0, .3);
     border-radius: 5px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .contentp {
@@ -113,7 +110,6 @@ nav ul li a:hover {
     min-height: 100vh;
     margin: 0 auto;
     box-shadow: 2px 0 2px rgba(0, 0, 0, .3), -2px 0 2px rgba(0, 0, 0, .3);
-    box-sizing: border-box;
     padding: 80px 120px 40px;
     display: flex;
     justify-content: space-between;
@@ -123,7 +119,6 @@ nav ul li a:hover {
 .contentp>.produk {
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, .3);
     padding: 20px;
-    box-sizing: border-box;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -154,7 +149,6 @@ nav ul li a:hover {
     font-size: 1.2em;
     border-radius: 10px;
     box-shadow: 0 0 2px rgba(0, 0, 0, .3);
-    box-sizing: border-box;
     align-self: stretch;
     transition: all .2s;
 }
@@ -333,5 +327,10 @@ footer .icon {
 
     .menu-toggle {
         display: flex;
+    }
+
+    .content {
+        padding: 80px 20px 40px;
+        align-items: center;
     }
 }
