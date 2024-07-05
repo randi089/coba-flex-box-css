@@ -22,6 +22,11 @@ body {
     font-family: 'delray', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #1A2130;
+}
+
 /* Navbar */
 nav {
     width: 100%;
@@ -35,15 +40,14 @@ nav {
     position: fixed;
 }
 
-nav .logo {
+nav .logo a {
     font-family: 'gracie';
     letter-spacing: 3px;
     user-select: none;
-    cursor: pointer;
     transition: all .5s;
 }
 
-nav .logo:hover {
+nav .logo a:hover {
     color: #fff;
 }
 
@@ -68,7 +72,7 @@ nav ul li a:hover {
     transform: translateY(10%);
 }
 
-/* content */
+/* content index */
 .content {
     font-family: 'mlc';
     max-width: 75%;
@@ -76,13 +80,87 @@ nav ul li a:hover {
     margin: 0 auto;
     box-shadow: 2px 0 2px rgba(0, 0, 0, .3), -2px 0 2px rgba(0, 0, 0, .3);
     box-sizing: border-box;
-    padding: 60px 40px 40px;
+    padding: 60px 140px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content h1 {
     text-align: center;
     margin: 20px 0;
     font-size: 2em;
+}
+
+.content>.img>img {
+    border: 10px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.contentp {
+    font-family: 'mlc';
+    max-width: 75%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, .3), -2px 0 2px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    padding: 80px 120px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contentp>.produk {
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .3);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    max-width: 240px;
+}
+
+.contentp>.produk>h4 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.contentp>.produk>.tes {
+    background-color: #050C9C;
+    padding: 70px;
+}
+
+.produk>button {
+    font-family: 'mlc';
+    margin-top: 10px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #06D001;
+    color: #EEEDEB;
+    border: 1px solid #059212;
+    font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+    align-self: stretch;
+    transition: all .2s;
+}
+
+.produk>img {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.produk>button:hover {
+    background-color: #059212;
+    color: #1A2130;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .3);
 }
 
 /* Hamburger Menu */
@@ -128,11 +206,10 @@ nav ul li a:hover {
 }
 
 .up>a {
-    text-decoration: none;
-    color: #1A2130;
     font-size: 2.5em;
     padding: 3px 8px;
     border-radius: 15px;
+    transition: all .2s;
 }
 
 .up>a:hover {
@@ -160,8 +237,6 @@ footer .icon {
 }
 
 .icon>.i>a {
-    text-decoration: none;
-    color: #1A2130;
     padding: 2px 5px;
     border-radius: 3px;
     transition: all .2s;
@@ -206,6 +281,18 @@ footer .icon {
 @media screen and (max-width: 768px) {
     nav ul {
         width: 50%;
+    }
+   .contentp {
+        padding: 80px 0 40px;
+        justify-content: center;
+    }
+
+    .contentp>.produk {
+        margin: 10px;
+    }
+
+   .content {
+        padding: 80px 30px 40px;
     }
 }
 
