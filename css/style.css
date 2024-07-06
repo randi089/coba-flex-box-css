@@ -212,11 +212,11 @@ nav ul li a:hover {
     flex-direction: column;
     margin-bottom: 30px;
     box-shadow: 0 0 4px 1px var(--hitamS);
-    box-sizing: border-box;
     padding: 20px 30px;
     border-radius: 10px;
     justify-content: space-between;
     transition: all .5s;
+    flex-wrap: wrap;
 }
 
 .contents>.card:nth-child(odd):hover {
@@ -363,9 +363,13 @@ footer .icon {
     nav ul {
         width: 50%;
     }
-   .contentp {
+   .contentp, .contents {
         padding: 80px 0 40px;
         justify-content: center;
+    }
+
+    .contents>.card {
+        max-width: 240px;
     }
 
     .contentp>.produk {
