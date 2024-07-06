@@ -363,8 +363,9 @@ footer .icon {
     nav ul {
         width: 50%;
     }
-   .contentp, .contents {
-        padding: 80px 0 40px;
+   .content, .contentp, .contents {
+        max-width: 100%;
+        padding: 80px 40px 40px;
         justify-content: center;
     }
 
@@ -374,10 +375,6 @@ footer .icon {
 
     .contentp>.produk {
         margin: 10px;
-    }
-
-   .content {
-        padding: 80px 30px 40px;
     }
 
     .up>a:hover {
@@ -433,10 +430,5 @@ footer .icon {
 
     .menu-toggle {
         display: flex;
-    }
-
-    .content {
-        padding: 80px 20px 40px;
-        align-items: center;
     }
 }
