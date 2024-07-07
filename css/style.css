@@ -230,14 +230,19 @@ nav ul li a:hover {
 }
 
 .contents>.card>.icon {
-    font-size: 5em;
+    font-size: 5vmax;
     text-align: center;
 }
 
 .contents>.card>h3 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2vmax;
     margin-bottom: 10px;
+}
+
+.contents>.card>p {
+    font-size: 1.2vmax;
+    text-align: center;
 }
 
 /* Hamburger Menu */
