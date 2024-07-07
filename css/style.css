@@ -44,12 +44,12 @@ a {
 
 /* Navbar */
 nav {
-    width: 100%;
+    width: 100vw;
     display: flex;
     background-color: var(--biru);
     justify-content: space-around;
     color: var(--hitam);
-    height: 50px;
+    height: calc(6vmin + 1.2rem);
     align-items: center;
     box-shadow: 0 1px 2px var(--hitamS);
     position: fixed;
@@ -65,33 +65,37 @@ nav .logo a {
 
 nav .logo a:hover {
     color: var(--putih);
+    text-shadow: 0 0 5px var(--putih);
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    width: 40%;
+    width: 40vw;
     justify-content: space-between;
 }
 
 nav ul li a {
     color: var(--hitam);
     text-decoration: none;
-    padding: 5px;
+    padding: .4rem .6rem;
+    border: 1px solid transparent;
     transition: all .2s;
 }
 
 nav ul li a:hover {
-    color: var(--putih);
-    background-color: #050C9C;
-    border-radius: 5px;
-    transform: translateY(10%);
+    color: #E6E6E6;
+    background-color: #60C3F7;
+    border-radius: 1.2rem;
+    border: 1px solid #E6E6E6;
+    text-shadow: 0 0 3px var(--putih);
+    box-shadow: 0 0 3px #E6E6E6;
 }
 
 /* content index */
 .content {
     font-family: 'mlc';
-    max-width: 75%;
+    max-width: 75vw;
     min-height: 100vh;
     margin: 0 auto;
     box-shadow: 2px 0 2px var(--hitamS), -2px 0 2px var(--hitamS);
@@ -129,7 +133,7 @@ nav ul li a:hover {
 /* content produk */
 .contentp {
     font-family: 'mlc';
-    max-width: 75%;
+    max-width: 75vw;
     min-height: 100vh;
     margin: 0 auto;
     box-shadow: 2px 0 2px var(--hitamS), -2px 0 2px var(--hitamS);
@@ -189,14 +193,15 @@ nav ul li a:hover {
 
 .produk>button:hover {
     background-color: var(--hjGelap);
-    color: var(--hitam);
+    color: #E6E6E6;
     box-shadow: 0 0 4px 1px var(--hitamS);
+    text-shadow: 0 0 5px #E6E6E6;
 }
 
 /* content service */
 .contents {
     font-family: 'mlc';
-    max-width: 75%;
+    max-width: 75vw;
     min-height: 100vh;
     margin: 0 auto;
     box-shadow: 2px 0 2px var(--hitamS), -2px 0 2px var(--hitamS);
@@ -207,26 +212,27 @@ nav ul li a:hover {
 }
 
 .contents>.card {
-    max-width: 40%;
+    max-width: 25vmax;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 5vmin;
     box-shadow: 0 0 4px 1px var(--hitamS);
-    padding: 20px 30px;
+    padding: 5vmin 6vmin;
     border-radius: 10px;
     justify-content: space-between;
-    transition: all .5s;
     flex-wrap: wrap;
+    margin-right: 2vmin;
+    transition: all .5s;
 }
 
 .contents>.card:nth-child(odd):hover {
     box-shadow: 0 0 2px 2px var(--hitamS);
-    transform: translateX(10%);
+    transform: translateX(5vmin);
 }
 
 .contents>.card:nth-child(even):hover {
     box-shadow: 0 0 2px 2px var(--hitamS);
-    transform: translateX(-10%);
+    transform: translateX(-5vmin);
 }
 
 .contents>.card>.icon {
@@ -236,12 +242,12 @@ nav ul li a:hover {
 
 .contents>.card>h3 {
     text-align: center;
-    font-size: 2vmax;
+    font-size: calc(2vmax + .2rem);
     margin-bottom: 10px;
 }
 
 .contents>.card>p {
-    font-size: 1.2vmax;
+    font-size: calc(1.2vmax + .1rem);
     text-align: center;
 }
 
@@ -283,20 +289,23 @@ nav ul li a:hover {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    margin-right: 1vmin;
+    margin-bottom: 1vmin;
 }
 
 .up>a {
     font-size: 2.5em;
     padding: 3px 8px;
-    border-radius: 15px;
+    border-radius: 1em;
+    border: 1px solid transparent;
     transition: all .2s;
 }
 
 .up>a:hover {
     color: var(--putih);
     background-color: var(--hitam);
+    border: 1px solid #384869;
+    box-shadow: 0 0 10px var(--hitam)
 }
 
 /* footer */
@@ -327,6 +336,7 @@ footer .icon {
 .icon>.i>a:hover {
     color: var(--putih);
     background-color: var(--hitam);
+    box-shadow: 0 0 5px #1A2130;
 }
 
 /* Hamburger Menu Animation */
@@ -339,7 +349,8 @@ footer .icon {
 }
 
 .menu-toggle input:checked ~ span:nth-child(2) {
-    background-color: var(--putih);
+    background-color: #FA0000;
+    box-shadow: 0 0 3px #FF2E2E;
     transform: rotate(45deg) translate(-1px, -1px);
 }
 
@@ -349,7 +360,8 @@ footer .icon {
 }
 
 .menu-toggle input:checked ~ span:last-child {
-    background-color: var(--putih);
+    background-color: #FA0000;
+    box-shadow: 0 0 3px #FF2E2E;
     transform: rotate(-45deg) translate(-1px, 0);
 }
 
@@ -368,14 +380,15 @@ footer .icon {
     nav ul {
         width: 50%;
     }
-   .content, .contentp, .contents {
-        max-width: 100%;
+   .content, .contentp {
+        max-width: 100vw;
         padding: 80px 40px 40px;
         justify-content: center;
     }
 
-    .contents>.card {
-        max-width: 240px;
+    .contents {
+        max-width: 100vw;
+        padding: 80px 40px 40px;
     }
 
     .contentp>.produk {
@@ -413,7 +426,7 @@ footer .icon {
         top: 0;
         height: 100vh;
         flex-direction: column;
-        background-color: var(--hitamS);
+        background-color: rgba(0, 0, 0, .7);
         justify-content: space-evenly;
         align-items: center;
         z-index: -1;
@@ -429,11 +442,17 @@ footer .icon {
 
     nav ul li a {
         color: black;
-        background-color: rgba(255, 255, 255, .6);
-        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .7);
+        border-radius: 3vmin;
+        border: 1px solid var(--putih);
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, .5);
     }
 
     .menu-toggle {
         display: flex;
+    }
+
+    .contents {
+        justify-content: center;
     }
 }
